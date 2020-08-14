@@ -1,24 +1,29 @@
-import pandas as pd
-import pickle
-from sklearn.feature_extraction.text import CountVectorizer
-from sklearn import svm
-from sklearn.model_selection import train_test_split
+## The model script is no longer needed, it is left for visibility purposes only
 
-df = pd.read_excel("Email_data.xlsx")
 
-df = df[["Label", "Text"]]
+##TODO: Improve model!
 
-X = df["Text"]
-y = df["Label"]
+# import pandas as pd
+# import pickle
+# from sklearn.feature_extraction.text import CountVectorizer
+# from sklearn import svm
+# from sklearn.model_selection import train_test_split
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+# df = pd.read_excel("Email_data.xlsx")
 
-cv = CountVectorizer()
-features = cv.fit_transform(X_train)
+# df = df[["Label", "Text"]]
 
-pickle.dump(cv, open("transform.pkl", "wb"))
+# X = df["Text"]
+# y = df["Label"]
 
-model = svm.SVC()
-model.fit(features, y_train)
+# X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 
-pickle.dump(model, open("spam_classification_model.pkl", "wb"))
+# cv = CountVectorizer()
+# features = cv.fit_transform(X_train)
+
+# pickle.dump(cv, open("transform.pkl", "wb"))
+
+# model = svm.SVC()
+# model.fit(features, y_train)
+
+# pickle.dump(model, open("spam_classification_model.pkl", "wb"))
