@@ -4,7 +4,7 @@ Aren't you tired of the constant buzzing of your phone form the mail notificatio
 
 Check it out: [KIIT spam mail classifier](https://kiit-spam-classifier.herokuapp.com/)
 
-# Table of Contents
+# The Process
 
 - Data Collection
   - All the mails were collected from the [official KIIT DU mail id.](http://mail.google.com/a/kiit.ac.in)
