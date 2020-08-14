@@ -25,4 +25,4 @@ Check it out: [KIIT spam mail classifier](https://kiit-spam-classifier.herokuapp
   - The model was trained on 80% of the total data and then validated against the testing data with 95% accuracy metric.
 
 - Deployment
-  - A client facing API using flask and CSS ([Tailwind + Tailblocks](https://mertjf.github.io/tailblocks/)) was then deployed on the [Heroku cloud platform.](https://www.heroku.com/)
+  - A client facing API using flask and HTML ([Tailwind + Tailblocks](https://mertjf.github.io/tailblocks/)) was then deployed on the [Heroku cloud platform.](https://www.heroku.com/)
