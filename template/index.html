@@ -1,44 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-    <title>KIIT Mail Spam Classisfier</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <title>KIIT Mail Spam Classisfier</title>
 </head>
+
 <body>
 
   <header class="text-gray-500 bg-gray-900 body-font">
     <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
       <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+          stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
+          viewBox="0 0 24 24">
           <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
         </svg>
         <span class="ml-3 text-xl">tailblocks</span>
       </a>
       <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-        <a href = "https://kiit.ac.in/" class="mr-5 hover:text-white">KIIT DU</a>
-        <a class="mr-5 hover:text-white">GitHub</a>
+        <a href="https://kiit.ac.in/" class="mr-5 hover:text-white">KIIT DU</a>
+        <a href="https://github.com/A4k9/KIIT_email_classifier" class="mr-5 hover:text-white">GitHub</a>
       </nav>
     </div>
   </header>
 
-    <section class="text-gray-500 bg-gray-900 body-font">
-        <form action={{url_for('predict')}} method = "POST">
-<!--         <form action="result.html" method = "POST">-->
-            <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
-            <!-- <img class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600"> -->
-            <textarea name="message" class="w-full bg-gray-800 rounded border border-gray-700 text-white focus:outline-none h-48 focus:border-indigo-500 text-base px-4 py-2 resize-none block" placeholder="Enter E-mail Here"></textarea>
-            <div class="text-center lg:w-2/3 w-full">
-                <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">Attending KIIT DU?</h1>
-                <p class="leading-relaxed mb-8">Aren't you tired of the constant buzzing of your phone form the mail notifications, only for them to turn out to be spam mails promoting the next big event you didn't want in your memory? Try out this simple spam classifier personalized for KIIT DU!</p>
-                <div class="flex justify-center">
-                <button input type="submit" value="prediction" class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Predict</button>
-                </div>
-            </div>
-            </div>
-        </form>
-    </section>
+  <section class="text-gray-500 bg-gray-900 body-font">
+    <form action={{url_for('predict')}} method="POST">
+      <!--         <form action="result.html" method = "POST">-->
+      <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
+        <!-- <img class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600"> -->
+        <textarea name="message"
+          class="w-full bg-gray-800 rounded border border-gray-700 text-white focus:outline-none h-48 focus:border-indigo-500 text-base px-4 py-2 resize-none block"
+          placeholder="Enter E-mail Here"></textarea>
+        <div class="text-center lg:w-2/3 w-full">
+          <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">Attending KIIT DU?</h1>
+          <p class="leading-relaxed mb-8">Aren't you tired of the constant buzzing of your phone form the mail
+            notifications, only for them to turn out to be spam mails promoting the next big event you didn't want in
+            your memory? Try out this simple spam classifier personalized for KIIT DU!</p>
+          <div class="flex justify-center">
+            <button input type="submit" value="prediction"
+              class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Predict</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </section>
 
 </body>
+
 </html>
